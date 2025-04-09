@@ -1,0 +1,18 @@
+name: Modern Elegance
+type: theme
+description: 'A clean, modern Drupal 10 theme with elegant UI elements'
+core_version_requirement: ^10
+base theme: false
+
+# Define regions
+regions:
+  top_banner: 'Top Banner'
+  logo: 'Logo'
+  navigation: 'Navigation Menu'
+  left_sidebar: 'Left Sidebar'
+  content: 'Content'
+  footer: 'Footer'
+
+# Libraries
+libraries:
+  - modern_elegance/global-styling
