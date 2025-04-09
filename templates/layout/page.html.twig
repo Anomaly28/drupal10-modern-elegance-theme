@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ */
+#}
+<div class="page">
+  {% if page.top_banner %}
+    <div class="top-banner bg-blue-50">
+      {{ page.top_banner }}
+    </div>
+  {% endif %}
+  
+  <header class="header shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+      {% if page.logo %}
+        <div class="logo">
+          {{ page.logo }}
+        </div>
+      {% endif %}
+  
+      {% if page.navigation %}
+        <nav class="navigation">
+          {{ page.navigation }}
+        </nav>
+      {% endif %}
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-wrap">
+        {% if page.left_sidebar %}
+          <aside class="left-sidebar w-full md:w-1/4 pr-0 md:pr-6 mb-6 md:mb-0">
+            {{ page.left_sidebar }}
+          </aside>
+        {% endif %}
+        
+        <div class="content w-full {% if page.left_sidebar %}md:w-3/4{% endif %}">
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  {% if page.footer %}
+    <footer class="footer bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
+</div>
